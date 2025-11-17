@@ -39,6 +39,6 @@ Enter a valid city name when prompted.
 ## Project Structure
 
 weather-aqi-monitor/
-├── weather.py
-├── README.md
-└── requirements.txt
+├── weather.py \n
+├── README.md \n
+└── requirements.txt \n
