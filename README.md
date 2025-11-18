@@ -1,44 +1,51 @@
 # Weather AQI Monitor
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Requests](https://img.shields.io/badge/Requests-HTTP%20Client-green)
+![Colorama](https://img.shields.io/badge/Colorama-CLI%20Colors-yellow)
+![OpenWeather](https://img.shields.io/badge/API-OpenWeather-orange)
+![AQI](https://img.shields.io/badge/AQI-Monitoring-red)
 
-Weather AQI Monitor is a Python-based command-line application that retrieves and displays real-time weather information and air quality (AQI) data using the OpenWeather API. It shows temperature, humidity, wind speed, visibility, pollutant concentrations, and health recommendations with color-coded terminal output for better readability.
+A lightweight command-line tool that fetches **real-time weather** and **air quality (AQI)** for any city using OpenWeather APIs.
 
-## Key Features
+It provides:
+- Temperature in °C and °F  
+- Weather description + emoji  
+- Humidity, wind, pressure, visibility, cloudiness  
+- Sunrise & sunset  
+- AQI level with color-coded alert  
+- Pollutant breakdown (PM2.5, PM10, NO₂, O₃, CO, SO₂)  
+- Health advice based on AQI & pollutant levels  
 
-* Real-time weather metrics: temperature, feels-like temperature, humidity, pressure, wind speed, visibility, cloudiness
-* Air Quality Index (AQI) with category and guidance
-* Pollutant data: PM2.5, PM10, NO₂, O₃, CO, SO₂
-* Basic weather-condition indicators
-* Color-coded terminal display
-* Error handling for invalid cities, API issues, and connection problems
+---
 
-## Requirements
+## 🚀 Features
 
-* requests
-* colorama
+- Fetches current weather (`/weather` API)  
+- Fetches air pollution & AQI (`/air_pollution` API)  
+- Colourised output using **Colorama**  
+- Automatic pollutant risk detection  
+- Clean CLI display with emojis  
+- Graceful error handling (404, timeout, invalid key, etc.)
 
-## Installation
+---
 
-pip install requests colorama
+## 📦 Requirements
 
-## Configuration
+- Python **3.8+**
+- OpenWeather API key  
+  Get one free: https://openweathermap.org/api
 
-Get a free API key from:
-[https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
+---
 
-Set your key in the script:
+## ⚙️ Installation
 
-API_KEY = "Your API Key"
+```bash
+git clone https://github.com/Vishwas8867/weather-aqi-monitor/
+cd weather-aqi-monitor
 
-## Usage
+python -m venv .venv
+source .venv/bin/activate      # macOS / Linux
+.\\.venv\\Scripts\\activate    # Windows
 
-python weather.py
-Enter a valid city name when prompted.
-
-## Project Structure
-
-weather-aqi-monitor/
-├── weather.py \n
-├── README.md \n
-└── requirements.txt \n
+pip install -r requirements.txt
